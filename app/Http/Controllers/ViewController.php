@@ -7,15 +7,21 @@ use Illuminate\Http\Request;
 class ViewController extends Controller
 {
     //
-    function showForm()
+    function showphp()
     {
-        //code untuk meload data yg akan dimuat di form
-        return view('showgreetings');
+
+        return view('CekKelulusan');
     }
 
-    function resultGreetings()
+    function resulthasil()
     {
         //code untuk meload data yg akan dimuat di form
-        return view('tugas');
+        return view('file');
+    }
+
+    function showETS()
+    {
+        //code untuk meload data yg akan dimuat di form
+        return view('utshtml');
     }
 }
