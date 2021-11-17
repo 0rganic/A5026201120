@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Duplikasi Bukalapak | JEREMY DIAZ PRASETYO</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous" />
+    <script src="https://kit.fontawesome.com/202f8bfc5f.js" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            color: rgb(49, 49, 49);
+            background-color: #ffffff;
+            font-size: 16px;
+        }
+
+        .container {
+            padding-top: 50px;
+        }
+
+        #img-kecil {
+            padding-right: 1px;
+        }
+
+        #img-kecil img {
+            border-radius: 5px;
+        }
+
+        #ikon-bawah {
+            padding: 10px;
+        }
+
+        .ikon-favorit a i {
+            color: rgba(41, 40, 40, 0.993);
+            font-size: 16px;
+        }
+
+        .ikon-bagikan a i {
+            color: rgba(41, 40, 40, 0.993);
+            font-size: 16px;
+        }
+
+        #titik-dot {
+            color: rgb(131, 131, 131);
+            font-size: 15px;
+            font-variant-position: normal;
+        }
+
+        #ikon-bawah {
+            padding: 10px;
+        }
+
+        .ikon-favorit a i {
+            color: rgba(41, 40, 40, 0.993);
+            font-size: 16px;
+        }
+
+        .ikon-bagikan a i {
+            color: rgba(41, 40, 40, 0.993);
+            font-size: 16px;
+        }
+
+        #price {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        #abu-abu {
+            color: rgb(131, 131, 131);
+        }
+
+        #pengiriman {
+            padding-left: 40px;
+        }
+
+        #alamat-underline {
+            color: black;
+            border-bottom: dashed;
+            border-width: 1px;
+            font-size: 12px;
+        }
+
+        #chat {
+            border: 2px solid #000;
+            padding: 10px 10px;
+        }
+
+        #masukan-keranjang {
+            border: 2px solid #000;
+            padding: 10px 10px;
+        }
+
+        .checked {
+            color: rgb(253, 236, 1);
+        }
+
+        #beli-sekarang {
+            border: 2px solid #a50530;
+            border-radius: 4px;
+            background-color: #a50530;
+            padding: 10px 10px;
+            color: rgb(255, 255, 255);
+        }
+
+        #beli-sekarang:hover {
+            background-color: #c51b48;
+        }
+
+        #tombol div {
+            padding: 0 5px;
+        }
+
+        #gambar-promosi {
+            padding: 0 30px;
+        }
+
+        #promosi {
+            color: rgb(131, 131, 131);
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-5">
+                <img class="img-fluid" src="https://s4.bukalapak.com/img/41347110292/large/data.jpeg.webp" />
+                <div class="row">
+                    <div class="col-sm" style="display: flex">
+                        <div class="col-sm" id="img-kecil">
+                            <img class="img-fluid"
+                                src="https://s4.bukalapak.com/img/41347110292/large/data.jpeg.webp" />
+                        </div>
+                        <div class="col-sm" id="img-kecil">
+                            <img class="img-fluid"
+                                src="https://s1.bukalapak.com/img/64094917192/small/data.jpeg.webp" />
+                        </div>
+                        <div class="col-sm" id="img-kecil">
+                            <img class="img-fluid"
+                                src="https://s2.bukalapak.com/img/73094917192/small/data.jpeg.webp" />
+                        </div>
+                        <div class="col-sm" id="img-kecil">
+                            <img class="img-fluid"
+                                src="https://s1.bukalapak.com/img/67094917192/small/data.jpeg.webp" />
+                        </div>
+                        <div class="col-sm" id="img-kecil">
+                            <img class="img-fluid"
+                                src="https://s1.bukalapak.com/img/17984917192/small/data.jpeg.webp" />
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row" id="ikon-bawah">
+                    <div class="col-md-6 border-right text-center">
+                        <div class="ikon-favorit">
+                            <span><a href="" style="color: black"><i
+                                        class="far fa-heart"></i>&nbsp;&nbsp;&nbsp;Favoritkan</a></span>
+                        </div>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <div class="ikon-bagikan">
+                            <span>
+                                <a href="" style="color: black"><i
+                                        class="fas fa-share-alt"></i>&nbsp;&nbsp;&nbsp;Bagikan</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="row">
+                    <div class="col-sm-9">
+                        <h5>MCDODO CH-717 TRAVEL ADAPTOR <br> CHARGER LED DISPLAY PD FAST <br> CHARGING POWER DELIVERY
+                            QUICK <br>
+                            CHARGE QC 3.0</h5>
+
+                        <small> <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                        </small>
+
+                        &nbsp;26 Ulasan <span id="titik-dot">•</span> 27 Terjual
+                    </div>
+                    <div class="col-sm-3">
+                        <img class="img-fluid"
+                            src="https://s0.bukalapak.com/ast/bazaar-dweb/base/images/emblem-new-super-seller.svg" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm" id="price">
+                        <h4><b>Rp 125.000</b></h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm" style="font-size: 15px;">Tersedia > 10 stok barang</div>
+                </div>
+                <hr />
+                <div class="row">
+                    <div class="col-sm">
+                        <p><b>Pengiriman</b></p>
+                    </div>
+                    <div class="col-sm">
+                        <small id="abu-abu">Lokasi Pelapak</small><br />
+                        Jakarta Utara
+                    </div>
+                    <div class="col-sm-6 border-left" id="pengiriman">
+                        <small id="abu-abu">Tujuan Pengiriman</small> <br />
+                        Pasar Minggu, Jakarta Selatan <br /><a id="alamat-underline">Ubah Alamat</a>
+                    </div>
+                </div>
+
+                <hr />
+
+                <div class="row" id="tombol">
+                    <div class="col-sm-2">
+                        <button type="button" class="btn btn-light btn-block" id="chat"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-chat-left-dots" viewBox="0 0 16 16">
+                                <path
+                                    d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 
+                                    2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                                <path
+                                    d="M5 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+                            </svg>&nbsp;<b>Chat</b></button>
+                    </div>
+                    <div class="col-sm">
+                        <button type="button" class="btn btn-light btn-block" id="masukan-keranjang"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-cart-plus" viewBox="0 0 16 16">
+                                <path
+                                    d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z" />
+                                <path
+                                    d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0
+                                    4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 
+                                    10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+                            </svg>&nbsp;&nbsp;<b>Masukkan Keranjang</b></button>
+                    </div>
+                    <div class="col-sm">
+                        <button type="button" class="btn btn-light btn-block" id="beli-sekarang"><b>Beli
+                                Sekarang</b></button>
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-sm">&nbsp;<i class="fa fa-hourglass-2"></i> Bayar sebelum jam 16.00 WIB agar barang
+                        dikirim hari ini</div>
+                </div>
+
+                <hr />
+
+                <div class="row">
+                    <div class="col-sm-3" id="gambar-promosi">
+                        <img src="https://s0.bukalapak.com/elysium/images/illustration-qr.png" />
+                    </div>
+                    <div class="col-sm-9">
+                        <b>Lebih Hemat di Aplikasi!</b>
+                        <br />
+                        <p id="promosi">
+                            Ada gratis ongkir dan promo menarik<br />
+                            kamu. Download sekarang!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
