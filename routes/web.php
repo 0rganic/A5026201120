@@ -20,6 +20,12 @@ Route::get('praktikum2', function () {
     return view('htmlformvalidasi');
 });
 
+Route::get('jsjquery', function () {
+    return view('jquery');
+});
+
 //jika ternyata kasusnya butuh load banyak proses
-Route::get('isiannama', "ViewController@showForm");
-Route::post('greetings', "ViewController@resultGreetings");
+Route::get('tugasphp', "ViewController@showphp");
+Route::post('hasil', "ViewController@resulthasil");
+
+Route::get('ets', "ViewController@showETS");
