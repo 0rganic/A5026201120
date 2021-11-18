@@ -41,6 +41,7 @@
             </div>
         </div>
         <form action="/www.w3schools.com" onsubmit="return fnama() && fnik()  && fnbatch()">
+            @csrf
             <div class="row">
                 <div class="col">
                     <table style="width:100%">
