@@ -45,3 +45,18 @@ Route::post('/pegawai/update', 'PegawaiController@update');
 
 //hapus data pegawai
 Route::get('/pegawai/hapus/{id}', 'PegawaiController@hapus');
+
+
+//route CRUD tugasphpmyadmin
+Route::get('/tugas', 'tugasPegawaiController@index');
+
+// tambah tugas
+Route::get('/tugas/tambah', 'tugasPegawaiController@tambah');
+Route::post('/tugas/store', 'tugasPegawaiController@store');
+
+//update tugas
+Route::get('/tugas/edit/{id}', 'tugasPegawaiController@edit');
+Route::post('/tugas/update', 'tugasPegawaiController@update');
+
+//Hapus tugas
+Route::get('/tugas/hapus/{id}', 'tugasPegawaiController@hapus');
