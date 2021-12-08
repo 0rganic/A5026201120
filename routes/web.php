@@ -60,3 +60,11 @@ Route::post('/tugas/update', 'tugasPegawaiController@update');
 
 //Hapus tugas
 Route::get('/tugas/hapus/{id}', 'tugasPegawaiController@hapus');
+
+//route CRUD absen
+Route::get('/absen', 'AbsenController@indexabsen');
+Route::get('/absen/add', 'AbsenController@add');
+Route::post('/absen/store', 'AbsenController@store');
+Route::get('/absen/edit/{id}', 'AbsenController@edit');
+Route::post('/absen/update', 'AbsenController@update');
+Route::get('/absen/hapus/{id}', 'AbsenController@hapus');
