@@ -13,6 +13,7 @@ class tugasPegawaiController extends Controller
         // mengambil data dari table pegawai
         $tugas = DB::table('tugas')->get();
 
+
         // mengirim data pegawai ke view index
         return view('tugas_pegawai.index', ['tugas' => $tugas]);
     }
@@ -20,9 +21,9 @@ class tugasPegawaiController extends Controller
     // method untuk menampilkan view form tambah pegawai
     public function tambah()
     {
-
+        $pegawai = DB::table('pegawai')->orderBy('pegawai_nama', 'asc')->get();
         // memanggil view tambah
-        return view('tugas_pegawai.tambah');
+        return view('tugas_pegawai.tambah', ['pegawai' => $pegawai]);
     }
     // method untuk insert data ke table pegawai
     public function store(Request $request)
@@ -42,8 +43,9 @@ class tugasPegawaiController extends Controller
     {
         // mengambil data pegawai berdasarkan id yang dipilih
         $tugas = DB::table('tugas')->where('ID', $id)->get();
+        $pegawai = DB::table('pegawai')->orderBy('pegawai_nama', 'asc')->get();
         // passing data pegawai yang didapat ke view edit.blade.php
-        return view('tugas_pegawai.edit', ['tugas' => $tugas]);
+        return view('tugas_pegawai.edit', ['tugas' => $tugas, 'pegawai' => $pegawai]);
     }
     // update data pegawai
     public function update(Request $request)

@@ -336,17 +336,17 @@
         <ul class="sidebar-navigation">
           <li class="header">My Works</li>
           <li>
-            <a href="">
+            <a href="/pegawai">
               <i class="fa fa-home" aria-hidden="true"></i> Pegawai
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="/absen">
               <i class="fa fa-tachometer" aria-hidden="true"></i> Absen
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="/tugas">
               <i class="fa fa-home" aria-hidden="true"></i> Tugas Pegawai
             </a>
           </li>
