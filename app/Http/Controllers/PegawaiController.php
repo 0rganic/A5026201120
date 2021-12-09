@@ -77,9 +77,19 @@ class PegawaiController extends Controller
         // mengambil data dari table pegawai sesuai pencarian data
         $pegawai = DB::table('pegawai')
             ->where('pegawai_nama', 'like', "%" . $cari . "%")
+            ->orWhere('pegawai_alamat', 'like', "%" . $cari . "%")
             ->paginate();
 
         // mengirim data pegawai ke view index
         return view('pegawai.index', ['pegawai' => $pegawai]);
+    }
+
+    // method untuk melihat detail data pegawai
+    public function detail($id)
+    {
+        // mengambil data pegawai berdasarkan id yang dipilih
+        $pegawai = DB::table('pegawai')->where('pegawai_id', $id)->get();
+        // passing data pegawai yang didapat ke view edit.blade.php
+        return view('pegawai.detail', ['pegawai' => $pegawai]);
     }
 }

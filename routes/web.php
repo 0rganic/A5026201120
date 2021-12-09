@@ -27,36 +27,26 @@ Route::get('jsjquery', function () {
 //jika ternyata kasusnya butuh load banyak proses
 Route::get('tugasphp', "ViewController@showphp");
 Route::post('hasil', "ViewController@resulthasil");
-
 Route::get('ets', "ViewController@showETS");
 
 
 //route PegawaiCRUD
 Route::get('/pegawai', 'PegawaiController@index');
-//tambah data pegawai
 Route::get('/pegawai/tambah', 'PegawaiController@tambah');
 Route::post('/pegawai/store', 'PegawaiController@store');
-//edit data pegawai
 Route::get('/pegawai/edit/{id}', 'PegawaiController@edit');
 Route::post('/pegawai/update', 'PegawaiController@update');
-//hapus data pegawai
 Route::get('/pegawai/hapus/{id}', 'PegawaiController@hapus');
-// Cari data pegawai
 Route::get('/pegawai/cari', 'PegawaiController@cari');
+Route::get('/pegawai/view/{id}', 'PegawaiController@detail');
 
 
-//route CRUD tugasphpmyadmin
+//route CRUD tugas
 Route::get('/tugas', 'tugasPegawaiController@index');
-
-// tambah tugas
 Route::get('/tugas/tambah', 'tugasPegawaiController@tambah');
 Route::post('/tugas/store', 'tugasPegawaiController@store');
-
-//update tugas
 Route::get('/tugas/edit/{id}', 'tugasPegawaiController@edit');
 Route::post('/tugas/update', 'tugasPegawaiController@update');
-
-//Hapus tugas
 Route::get('/tugas/hapus/{id}', 'tugasPegawaiController@hapus');
 
 //route CRUD absen

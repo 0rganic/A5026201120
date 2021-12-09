@@ -352,12 +352,7 @@
           </li>
           <li>
             <a href="#">
-              <i class="fa fa-home" aria-hidden="true"></i> Minggu Depan
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i class="fa fa-home" aria-hidden="true"></i> Praktikum
+              <i class="fa fa-home" aria-hidden="true"></i> Buku
             </a>
           </li>
 
