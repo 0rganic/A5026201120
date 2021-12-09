@@ -31,20 +31,18 @@ Route::post('hasil', "ViewController@resulthasil");
 Route::get('ets', "ViewController@showETS");
 
 
-//route CRUD
+//route PegawaiCRUD
 Route::get('/pegawai', 'PegawaiController@index');
-
 //tambah data pegawai
 Route::get('/pegawai/tambah', 'PegawaiController@tambah');
 Route::post('/pegawai/store', 'PegawaiController@store');
-
 //edit data pegawai
 Route::get('/pegawai/edit/{id}', 'PegawaiController@edit');
 Route::post('/pegawai/update', 'PegawaiController@update');
-
-
 //hapus data pegawai
 Route::get('/pegawai/hapus/{id}', 'PegawaiController@hapus');
+// Cari data pegawai
+Route::get('/pegawai/cari', 'PegawaiController@cari');
 
 
 //route CRUD tugasphpmyadmin

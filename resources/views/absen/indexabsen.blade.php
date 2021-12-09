@@ -11,7 +11,8 @@
 	<br/>
 	<br/>
 
-	<table border="1">
+
+	<table class="table">
 		<tr>
 
 			<th>IDPegawai</th>

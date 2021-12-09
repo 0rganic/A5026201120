@@ -11,8 +11,16 @@
 
 	<br/>
 	<br/>
+    <p>Cari Data Pegawai :</p>
+    <div class="container" text-align="center">
+        <form action="/pegawai/cari" method="GET">
+            <input type="text" class="form-control" name="cari" placeholder="Cari Pegawai berdasarkan nama atau alamat .." value="{{ old('cari') }}">
+            <input type="submit" class="btn btn-default" value="CARI">
+        </form>
+    </div>
 
-	<table border="1">
+
+	<table class="table">
 		<tr>
 			<th>Nama</th>
 			<th>Jabatan</th>
@@ -34,5 +42,8 @@
 		</tr>
 		@endforeach
 	</table>
+
+    {{ $pegawai->links() }}
+
 
 @endsection
