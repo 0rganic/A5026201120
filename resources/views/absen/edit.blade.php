@@ -2,7 +2,7 @@
    @extends('layout.bahagia')
 
    @section('title', 'Mengedit Data Absensi')
-   @section('judulhalaman', 'Edit Absensi Pegawai')
+   @section('judulhalaman', 'Edit Data Absensi Pegawai')
 
    @section('konten')
 
@@ -26,7 +26,7 @@
                     <td><label for="meeting-time">Tanggal</label></td>
                     <td><label>:</label></td>
                     <td><input type="datetime-local" id="meeting-time"
-                        name="meeting-time" value=""
+                        name="tanggal" value=""
                         min="2020-06-07T00:00" max="2024-06-14T00:00"></td>
             </tr>
             <tr>

@@ -349,7 +349,7 @@
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="/buku">
               <i class="fa fa-home" aria-hidden="true"></i> Buku
             </a>
           </li>
@@ -371,7 +371,7 @@
         </div>
         <div class="footer-basic">
             <footer>
-                <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>
+                <div class="social"><a href="https://www.instagram.com/p/CDL5uLllQGG/?utm_source=ig_web_copy_link"><i class="icon ion-social-instagram"></i></a><a href="https://www.instagram.com/p/B8lCGBVl6q6/?utm_source=ig_web_copy_link"><i class="icon ion-social-snapchat"></i></a><a href="https://www.instagram.com/p/B67t4dIFvp7/?utm_source=ig_web_copy_link"><i class="icon ion-social-twitter"></i></a><a href="https://www.instagram.com/p/BoRDr0eHi6m/?utm_source=ig_web_copy_link"><i class="icon ion-social-facebook"></i></a></div>
 
                 <p class="copyright">Jeremy Diaz Prasetyo | 5026201120</p>
             </footer>

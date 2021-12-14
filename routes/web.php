@@ -48,6 +48,8 @@ Route::post('/tugas/store', 'tugasPegawaiController@store');
 Route::get('/tugas/edit/{id}', 'tugasPegawaiController@edit');
 Route::post('/tugas/update', 'tugasPegawaiController@update');
 Route::get('/tugas/hapus/{id}', 'tugasPegawaiController@hapus');
+Route::get('/tugas/cari', 'tugasPegawaiController@cari');
+Route::get('/tugas/view/{id}', 'tugasPegawaiController@detail');
 
 //route CRUD absen
 Route::get('/absen', 'AbsenController@indexabsen');
@@ -56,3 +58,15 @@ Route::post('/absen/store', 'AbsenController@store');
 Route::get('/absen/edit/{id}', 'AbsenController@edit');
 Route::post('/absen/update', 'AbsenController@update');
 Route::get('/absen/hapus/{id}', 'AbsenController@hapus');
+Route::get('/absen/cari', 'AbsenController@cari');
+Route::get('/absen/view/{id}', 'AbsenController@detail');
+
+//route CRUD buku
+Route::get('/buku', 'BukuController@index');
+Route::get('/buku/tambah', 'BukuController@tambah');
+Route::post('/buku/store', 'BukuController@store');
+Route::get('/buku/edit/{id}', 'BukuController@edit');
+Route::post('/buku/update', 'BukuController@update');
+Route::get('/buku/hapus/{id}', 'BukuController@hapus');
+Route::get('/buku/cari', 'BukuController@cari');
+Route::get('/buku/view/{id}', 'BukuController@detail');

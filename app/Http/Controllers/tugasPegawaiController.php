@@ -11,7 +11,11 @@ class tugasPegawaiController extends Controller
     public function index()
     {
         // mengambil data dari table pegawai
-        $tugas = DB::table('tugas')->get();
+        // $tugas = DB::table('tugas')->get();
+        $tugas = DB::table('tugas')
+            ->join('pegawai', 'tugas.IDPegawai', '=', 'pegawai.pegawai_id')
+            ->select('tugas.*', 'pegawai.pegawai_nama')
+            ->paginate(3);
 
 
         // mengirim data pegawai ke view index
@@ -30,7 +34,7 @@ class tugasPegawaiController extends Controller
     {
         // insert data ke table pegawai
         DB::table('tugas')->insert([
-            'IDPegawai' => $request->IDPegawai,
+            'IDPegawai' => $request->idpegawai,
             'Tanggal' => $request->Tanggal,
             'NamaTugas' => $request->NamaTugas,
             'Status' => $request->Status
@@ -68,5 +72,31 @@ class tugasPegawaiController extends Controller
 
         // alihkan halaman ke halaman pegawai
         return redirect('/tugas');
+    }
+    // method cari data pegawai
+    public function cari(Request $request)
+    {
+        // menangkap data pencarian
+        $cari = $request->cari;
+
+        // mengambil data dari table pegawai sesuai pencarian data
+        $tugas = DB::table('tugas')
+            ->where('NamaTugas', 'like', "%" . $cari . "%")
+            ->orWhere('pegawai_nama', 'like', "%" . $cari . "%")
+            ->join('pegawai', 'tugas.IDPegawai', '=', 'pegawai.pegawai_id')
+            ->select('tugas.*', 'pegawai.pegawai_nama')
+            ->paginate(3);
+
+        // mengirim data pegawai ke view index
+        return view('tugas_pegawai.index', ['tugas' => $tugas]);
+    }
+
+    // method untuk melihat detail data pegawai
+    public function detail($id)
+    {
+        // mengambil data pegawai berdasarkan id yang dipilih
+        $tugas = DB::table('tugas')->where('ID', $id)->get();
+        // passing data pegawai yang didapat ke view edit.blade.php
+        return view('tugas_pegawai.detail', ['tugas' => $tugas]);
     }
 }
