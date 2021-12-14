@@ -11,7 +11,12 @@ class AbsenController extends Controller
     public function indexabsen()
     {
         // mengambil data dari table absen
-        $absen = DB::table('absen')->get();
+        // $absen = DB::table('absen')->get();
+        $absen = DB::table('absen')
+            ->join('pegawai', 'absen.IDPegawai', '=', 'pegawai.pegawai_id')
+            ->select('absen.*', 'pegawai.pegawai_nama')
+            ->paginate();
+
 
         // mengirim data absen ke view indexabsen
         return view('absen.indexabsen', ['absen' => $absen]);
@@ -46,10 +51,10 @@ class AbsenController extends Controller
         // mengambil data dari table pegawai
         $pegawai = DB::table('pegawai')->orderBy('pegawai_nama', 'asc')->get(); //defaultnya urut Primary Key
 
-        $judul = "Hallo Apa kabar" ;
+        $judul = "Hallo Apa kabar";
 
         // passing data absen yang didapat ke view update.blade.php
-        return view('absen.edit', ['absen' => $absen,'pegawai' => $pegawai , 'judul' => $judul]);
+        return view('absen.edit', ['absen' => $absen, 'pegawai' => $pegawai, 'judul' => $judul]);
     }
     // update data absen
     public function update(Request $request)

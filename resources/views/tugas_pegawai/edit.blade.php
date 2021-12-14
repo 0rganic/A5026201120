@@ -15,12 +15,32 @@
 	@foreach($tugas as $p)
 	<form action="/tugas/update" method="post">
 		{{ csrf_field() }}
-		<input type="hidden" name="ID" value="{{ $p->ID }}"> <br/>
-		ID Pegawai <input type="number" required="required" name="IDPegawai" value="{{ $p->IDPegawai }}"> <br/>
-		Tanggal <input type="datetime" required="required" name="Tanggal" value="{{ $p->Tanggal }}"> <br/>
-		Nama Tugas <input type="text" required="required" name="NamaTugas" value="{{ $p->NamaTugas }}"> <br/>
-		Status <input type="text" required="required" name="Status" value="{{ $p->Status }}"> <br/>
-		<input type="submit" value="Simpan Data">
+        <table class="w3-table">
+                <input type="hidden" name="ID" value="{{ $p->ID }}"> <br/>
+            <tr>
+                <td><label>ID Pegawai</label></td>
+                <td><label>:</label></td>
+                <td><input type="number" required="required" name="IDPegawai" value="{{ $p->IDPegawai }}"> </td>
+            </tr>
+            <tr>
+                <div class="form-group">
+                    <td><label for="meeting-time">Tanggal</label></td>
+                    <td><label>:</label></td>
+                    <td><input type="datetime-local" id="meeting-time"
+                        name="meeting-time" value=""
+                        min="2020-06-07T00:00" max="2024-06-14T00:00"></td>
+            </tr>
+            <tr>
+                <td><label>Nama Tugas</label></td>
+                <td><label>:</label></td>
+                <td><input type="text" required="required" name="NamaTugas" value="{{ $p->NamaTugas }}"></td>
+            </tr>
+            <tr>
+                <td><label>Status</label></td>
+                <td><label>:</label></td>
+                <td><input type="text" required="required" name="Status" value="{{ $p->Status }}"></td>
+        </table>
+        <input type="submit" class="btn btn-primary" value="Simpan Data">
 	</form>
 	@endforeach
 
