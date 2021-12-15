@@ -21,6 +21,7 @@
     </script>
 
 
+
     <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js"></script>
 
@@ -351,6 +352,11 @@
           <li>
             <a href="/buku">
               <i class="fa fa-home" aria-hidden="true"></i> Buku
+            </a>
+          </li>
+          <li>
+            <a href="/karyawan1">
+              <i class="fa fa-home" aria-hidden="true"></i> Karyawan1
             </a>
           </li>
 

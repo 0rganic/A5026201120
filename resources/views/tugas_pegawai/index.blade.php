@@ -10,7 +10,7 @@
 
 	<br/>
 	<br/>
-    <p>&nbsp;&nbsp;&nbsp;&nbsp;Cari Data Pegawai</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;Cari Data Tugas Pegawai</p>
 
     <table class="w3-table">
         <tr>
